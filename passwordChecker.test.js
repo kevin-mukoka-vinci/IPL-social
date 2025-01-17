@@ -17,5 +17,7 @@ test('Un mot de passe ne doit pas contenir la chaîne "IPL" (insensible à la ca
 });
 
 test('Un mot de passe valide', () => {
-  expect(passwordChecker('Valid1!')).toBe(true);
+  const result = passwordChecker('Valid1!?');
+  console.log('Result for "Valid1!?":', result);
+  expect(result).toBe(true);
 });
